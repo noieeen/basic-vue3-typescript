@@ -10,7 +10,7 @@
     <h4>account: {{ states.account }}</h4>
     <button @click="onClickClear">Clear Account</button>
 
-    <LoginForm/>
+    <LoginForm title='Login'/>
   </div>
 </template>
 

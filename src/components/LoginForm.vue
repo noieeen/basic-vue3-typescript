@@ -1,6 +1,6 @@
 <template>
     <div>
-            <h1>Login</h1>
+            <h1>{{title}}</h1>
     </div>
 
 </template>
@@ -9,7 +9,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-    setup() {
+
+    props:['title'],
+
+    setup(props) {
         return{}
     },
 })
