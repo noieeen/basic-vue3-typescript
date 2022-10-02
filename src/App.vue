@@ -10,7 +10,7 @@
     <h4>account: {{ states.account }}</h4>
     <button @click="onClickClear">Clear Account</button>
 
-    <LoginForm title='Login'/>
+    <LoginForm title='Login' @submit-login="loginOnNotify"/>
   </div>
 </template>
 
@@ -43,6 +43,10 @@ export default defineComponent({
             states.account = defaultAcc;
             console.log(states.account);
         };
+
+        const loginOnNotify =()=>{
+            console.log('login success')
+        }
         return {
             count1,
             count2,
@@ -50,6 +54,7 @@ export default defineComponent({
             onClickAdd2,
             states,
             onClickClear,
+            loginOnNotify
         };
     },
     components: { LoginForm }
