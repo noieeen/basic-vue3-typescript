@@ -17,6 +17,7 @@
 <script lang="ts">
 import { defineComponent, ref, reactive, onMounted } from "vue";
 import LoginForm from '@/components/LoginForm.vue'
+import { User } from "./types/user.types";
 
 const defaultAcc = { username: "", password: "" };
 export default defineComponent({
@@ -44,8 +45,8 @@ export default defineComponent({
             console.log(states.account);
         };
 
-        const loginOnNotify =()=>{
-            console.log('login success')
+        const loginOnNotify =(user:User)=>{
+            console.log('login success',JSON.stringify(user))
         }
         return {
             count1,
